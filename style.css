@@ -1,0 +1,721 @@
+:root{
+  --grey-color: rgb(99, 99, 99);
+  --brown-color: rgb(60, 59, 59);
+  --border-color: rgb(214, 214, 214);
+  --blue-color: rgb(46, 186, 174);
+}
+
+*, 
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: rgb(244, 244, 244);
+  font-family: 'Raleway', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--blue-color);
+  transition: all 0.2s;
+}
+
+.zoom:hover{
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.zoom-container{
+  overflow: hidden;
+}
+
+.zoom{
+  display: block; /*found this online because by div container was bigger than the image and was making the image get bigger on the screen*/
+}
+
+header{
+  display: flex;
+  font-size: 0.7rem;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 3px;
+  padding-left: 1.5rem;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.left-header{
+  display: flex;
+  align-items: center;
+}
+
+.right-header{
+  display: flex;
+  align-items: center;
+}
+
+form{
+  display: none;
+}
+
+.search:hover form{
+  display: block;
+}
+
+.header-bold{
+  font-weight: bold;
+  color: var(--brown-color);
+  border-right: 1px solid var(--border-color);
+  padding-right: 1.25rem;
+  letter-spacing: 4px;
+}
+
+header a{
+  color: var(--grey-color);
+  padding: 1.25rem 0;
+}
+
+.link::after {
+  content: '|';
+  padding: 0.75rem;
+  color: var(--border-color);
+}
+
+.link-1{
+  padding-left: 1.25rem;
+}
+
+.right-header a{
+  font-size: 1rem;
+  color: rgb(173, 173, 173);
+  padding: 1rem 1.5rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.right-header a:hover{
+  color: var(--blue-color);
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+  border: 2px solid var(--blue-color);
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.logo-container-1{
+  display: none;
+}
+
+main{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.main-content{
+  margin: 3rem 3rem 3rem 0;
+}
+
+article{
+  border: 1px solid var(--border-color);
+  background-color: white;
+  margin-bottom: 3rem;
+}
+
+article h2 a{
+  color: var(--brown-color);
+  letter-spacing: 5px;
+  font-weight: 900;
+}
+
+.article-info{
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.left-info p{
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--grey-color);
+  padding-top: 0.25rem;
+}
+
+.left-info{
+  border-right: 1px solid var(--border-color);
+  padding: 3rem;
+  width: 40rem;
+}
+
+.right-info{
+  padding: 4rem 2rem 3rem 7rem;
+  text-align: right;
+}
+
+.right-info p{
+  color: var(--brown-color);
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 0.7rem;
+}
+
+.right-info a{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.right-info a div{
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: var(--grey-color);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.right-info a div:hover{
+  color: var(--blue-color);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.right-info img{
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.article-content{
+  margin: 3rem auto;
+  width: 90%;
+}
+
+.article-content img{
+  width: 100%;
+}
+
+.article-content p{
+  color: var(--grey-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.75rem;
+  padding-top: 2rem;
+}
+
+.article-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  padding-top: 0;
+}
+
+.continue-reading{
+  border: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  color: var(--brown-color);
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 0.7rem;
+}
+
+.continue-reading:hover{
+  border-color: var(--blue-color);
+  transition: all 0.2s;
+}
+
+.article-interact a{
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  color: var(--grey-color);
+}
+
+.article-interact i{
+  color: var(--border-color);
+}
+
+.numbers::before{
+  content: '|';
+  padding: 0.8rem;
+  color: var(--border-color);
+}
+
+.general{
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.general:hover{
+  color: var(--blue-color);
+  text-decoration: none;
+  transition: all 0.2s
+}
+
+aside{
+  width: 30%;
+  letter-spacing: 3px;
+  margin: 0.5rem;
+}
+
+aside p{
+  color: var(--grey-color);
+  font-size: 0.6rem;
+}
+
+aside a{
+  color: var(--brown-color);
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.image-container{
+  width: 65px;
+  height: 70px;
+  overflow: hidden;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 74%, 50% 100%, 0 75%);
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(images/fox-logo.jpg);
+  transform: scale(1.1);
+}
+
+.logo-container{
+  margin: 2.5rem;
+  letter-spacing: 3px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.logo-container h1{
+  font-size: 2rem;
+  letter-spacing: 8px;
+  line-height: 3.25rem;
+  font-weight: 900;
+  color: var(--brown-color);
+}
+
+.logo-container p{
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+
+.big-headlines figcaption{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+figcaption img{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.big-headlines figure{
+  border: 1px solid var(--border-color);
+  background-color: white;
+  margin-bottom:2rem;
+  margin-left: 0;
+  width: 100%
+}
+
+.big-headlines{
+  border-bottom: 1px solid var(--border-color);
+  margin: 2.5rem;
+  padding-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.small-headlines{
+  border-bottom: 1px solid var(--border-color);
+  margin-left: 2.5rem;
+}
+
+.small-headlines figure{
+  background-color: rgb(244, 244, 244);
+  margin-left: 0;
+  margin-right: 2.5rem;
+  display: flex;
+  padding-bottom: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.small-headlines img{
+  margin-right: 1.5rem;
+  width: 65px;
+  height: 65px;
+  object-fit: cover; /*found that online so it doesn't stretch the image*/
+}
+
+.small-card{
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.about{
+  margin: 2.5rem;
+  margin-top: 3rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 4rem;
+}
+
+.about h3{
+  color: var(--brown-color);
+  font-size: 0.8rem;
+}
+
+.about p{
+  color: var(--grey-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  padding: 0.5rem 0 1.5rem 0;
+}
+
+.about a{
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  font-size: 0.6rem;
+}
+
+.about a:hover{
+  border-color: var(--blue-color);
+}
+
+footer{
+  margin: 2.5rem;
+}
+
+footer a{
+  font-size: 1rem;
+  color: rgb(173, 173, 173);
+  padding-right: 0.5rem;
+}
+
+footer p{
+  color: rgb(173, 173, 173);
+  padding-top: 2rem;
+  font-size: 0.25rem;
+  letter-spacing: 1.5px;
+}
+
+.previous-next{
+  margin: 4rem 0;
+}
+
+.previous-next a{
+  padding: 1.25rem 2rem;
+  border: 1px solid var(--border-color);
+  margin-right: 0.75rem;
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+}
+
+.previous{
+  color: var(--border-color);
+}
+
+.previous:hover{
+  color: var(--border-color);
+}
+
+.next{
+  color: var(--brown-color);
+}
+
+.next:hover{
+  border-color: var(--blue-color);
+}
+
+
+.page2-article{
+  margin: 3rem;
+}
+
+.page2-article .left-info{
+  width: 77%;
+}
+
+.page2-article .article-content{
+  width: 93%;
+}
+
+.page2-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0 5rem 0;
+}
+
+@media screen and (max-width: 1325px){
+  main{
+    display: block;
+  }
+
+  .main-content{
+    margin: 2rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .logo-container{
+    display: none;
+  }
+
+  .logo-container-1{
+    display: block;
+    margin: 3rem;
+    text-align: center;
+  }
+
+  .logo-container-1 h1{
+    font-size: 2rem;
+    letter-spacing: 8px;
+    line-height: 3.25rem;
+    font-weight: 900;
+    color: var(--brown-color);
+    margin-bottom: 0;
+  }
+
+  .logo-container-1 p{
+    font-size: 0.75rem;
+    line-height: 2rem;
+    letter-spacing: 3px;
+    color: var(--grey-color);
+  }
+
+  .logo-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-info{
+    width: 60rem;
+  }
+
+  .big-headlines{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 2.5rem;
+  }
+
+  .big-headlines figure .zoom{
+    width: 100%;
+  }
+
+  .big-headlines figure{
+    width: 47.75%;
+  }
+
+  aside{
+    width: 100%;
+  }
+
+  .no-margin{
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1030px){
+  .main-content{
+    margin: 0;
+    border: none;
+  }
+
+  nav{
+    display: none;
+  }
+
+  .header-bold{
+    border-style: hidden;
+  }
+
+  .article-info{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-info{
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .right-info{
+    padding: 0;
+    margin-bottom: 3rem;
+    display: flex;
+  }
+
+  .right-info p{
+    border-right: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+  }
+
+  .right-info a{
+    flex-direction: row-reverse;
+    padding-left: 0.75rem;
+  }
+
+  .right-info a div{
+    padding: 0.5rem;
+  }
+
+  .previous-next{
+    margin: 3rem;
+    margin-bottom: 4rem;
+  }
+  
+  .big-headlines{
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+  }
+
+  .big-headlines figure{
+    width: 46.5%;
+  }
+
+  .page2-article{
+    margin: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .logo-container-1 h1{
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+  }
+
+  h2{
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+
+  .search{
+    display: none;
+  }
+
+  .left-header a{
+    padding: 0.75rem;
+  }
+
+  .right-header a{
+    padding: 0.75rem 1.25rem;
+  }
+
+  .big-headlines figure{
+    width: 45%;
+  }
+
+  .no-margin{
+    margin-right: 0;
+  }
+
+  .article-info{
+    text-align: center;
+  }
+
+  .article-content{
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (max-width: 525px){
+  .right-info{
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .right-info p{
+    border: none;
+  }
+
+  .right-info a div{
+    display: none;
+  }
+
+  .right-info img{
+    margin: 0 auto;
+  }
+
+  .article-content{
+    margin: 0;
+    width: 100%
+  }
+
+  .article-content p{
+    padding: 1.5rem;
+  }
+
+  .article-info{
+    margin: 0;
+  }
+
+  .logo-container-1 h1{
+    font-size: 1.25rem;
+  }
+
+  h2{
+    font-size: 1rem;
+  }
+
+  .left-info{
+    padding-bottom: 0;
+  }
+
+  .article-bottom{
+    flex-direction: column-reverse;
+  }
+
+  .article-interact{
+    padding-bottom: 2rem;
+  }
+
+  .previous-next{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .previous-next a{
+    width: 90%;
+    margin: 0.5rem;
+    text-align: center;
+  }
+
+  .big-headlines figure{
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .page2-article .article-content{
+    width: 100%;
+  }
+}
